@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* =======================
+   COLOR TOKENS
+======================= */
+:root {
+  --neon-cyan: #22d3ee;
+  --neon-purple: #a855f7;
+}
+
+/* =======================
+   BASE LAYER
+======================= */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+  }
+
+  /* -------- DARK THEME -------- */
+  html.dark body {
+    background: linear-gradient(
+      135deg,
+      #020617,
+      #2e1065,
+      #020617
+    );
+    color: #ffffff;
+  }
+
+  /* -------- LIGHT THEME -------- */
+  html.light body {
+    background-color: #f8fafc; /* clean flat bg */
+    color: #0f172a;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #020617;
+  }
+
+  html.light ::-webkit-scrollbar-track {
+    background: #e5e7eb;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#8b5cf6, #0ea5e9);
+    border-radius: 999px;
+  }
+}
+
+/* =======================
+   UTILITIES
+======================= */
+@layer utilities {
+
+  /* ---- SECTION ISOLATION (VERY IMPORTANT) ---- */
+  .section-base {
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* ---------- GLASS ---------- */
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  html.light .glass {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  html.light .glass-dark {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+  }
+
+  /* ---------- GRADIENT TEXT (FIXED) ---------- */
+  .text-gradient-neon {
+    display: inline-block; /* 🔑 FIXES RECTANGLE ISSUE */
+    background-image: linear-gradient(
+      90deg,
+      var(--neon-cyan),
+      var(--neon-purple)
+    );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Light theme → NO gradient text */
+  html.light .text-gradient-neon {
+    background: none !important;
+    color: #0284c7; /* blue-600 */
+  }
+
+  /* ---------- TEXT FIXES ---------- */
+  html.light .text-white {
+    color: #0f172a;
+  }
+
+  html.light .text-gray-300 {
+    color: #475569;
+  }
+
+  html.light .text-gray-400 {
+    color: #64748b;
+  }
+
+  /* ---------- GLOW ---------- */
+  .shadow-glow {
+    box-shadow: 0 0 22px rgba(34, 211, 238, 0.35);
+  }
+
+  html.light .shadow-glow {
+    box-shadow: 0 0 14px rgba(2, 132, 199, 0.25);
+  }
+
+  /* ---------- MOTION ---------- */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* =======================
+   ACCESSIBILITY
+======================= */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift {
+    transform: none;
+  }
+}
