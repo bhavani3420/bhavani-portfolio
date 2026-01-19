@@ -9,6 +9,7 @@ const Experience = () => {
   });
 
   const experiences = [
+   
     {
       title: 'Software Engineer Intern',
       company: 'DevSecEngOps',
@@ -22,6 +23,19 @@ const Experience = () => {
         'Contributed to documentation and onboarding guides, enhancing team productivity',
       ],
       color: 'from-cyan-500 to-blue-500',
+    },
+     {
+      title: 'Web Development Intern',
+      company: 'Rinex Technologies',
+      location: 'Remote',
+      period: 'Apr 2024 – Jun 2024',
+      description: [
+        'Developed responsive web pages using HTML, CSS, and JavaScript',
+        'Worked on frontend components and improved UI consistency across pages',
+        'Collaborated with mentors to implement real-world web development tasks',
+        'Gained hands-on experience in website deployment and debugging',
+      ],
+      color: 'from-purple-500 to-pink-500',
     },
   ];
 
@@ -142,4 +156,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
