@@ -9,7 +9,21 @@ const Experience = () => {
   });
 
   const experiences = [
-   
+    {
+      title: 'Full Stack Developer Intern',
+      company: 'Emertxe Information Technologies',
+      location: 'Remote',
+      period: 'Jan 2026 – Feb 2026',
+      description: [
+        'Developed a full-stack music player web application (BeatFlow) using React, Node.js, Express, and MongoDB.',
+        'Designed and implemented 5+ REST APIs for user authentication, music streaming, favorites management, and search functionality.',
+        'Integrated Jamendo API to fetch and stream music, enabling dynamic song discovery and playback.',
+        'Built responsive frontend components and optimized API communication for smooth music playback experience.',
+        'Used Git and GitHub for version control, branch management, and collaborative development.',
+        'GitHub: github.com/bhavani3420/beatflow-music-player',
+      ],
+      color: 'from-green-500 to-teal-500',
+    },
     {
       title: 'Software Engineer Intern',
       company: 'DevSecEngOps',
@@ -23,19 +37,6 @@ const Experience = () => {
         'Contributed to documentation and onboarding guides, enhancing team productivity',
       ],
       color: 'from-cyan-500 to-blue-500',
-    },
-     {
-      title: 'Web Development Intern',
-      company: 'Rinex Technologies',
-      location: 'Remote',
-      period: 'Apr 2024 – Jun 2024',
-      description: [
-        'Developed responsive web pages using HTML, CSS, and JavaScript',
-        'Worked on frontend components and improved UI consistency across pages',
-        'Collaborated with mentors to implement real-world web development tasks',
-        'Gained hands-on experience in website deployment and debugging',
-      ],
-      color: 'from-purple-500 to-pink-500',
     },
   ];
 
