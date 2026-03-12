@@ -10,55 +10,64 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'BreatheSafe',
+      title: 'BreatheSafe – AQI Health Platform',
       description:
-        'A real-time AQI tracker with 24-hour forecasting, health recommendations, and Twilio-based SMS alerts. Applied MongoDB for user history and caching, achieving 25% faster load times.',
+        'A full-stack MERN platform providing personalized health guidance using real-time Air Quality Index data. Integrated Gemini API for AI recommendations and Twilio SMS alerts when pollution levels exceed safe limits.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
-      tags: ['MERN', 'Machine Learning', 'MongoDB', 'React Context API'],
-      github: 'https://github.com/bhavani3420/BreatheSafe_Project',
+      tags: ['MERN', 'MongoDB', 'React', 'Node.js', 'Gemini API', 'Twilio'],
+      github: 'https://github.com/bhavani3420/Breathesafe_project',
       live: '#',
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Multiple Disease Prediction Web App',
+      title: 'LinguaConnect – Language Learning Platform',
       description:
-        'A machine learning–based web application that predicts multiple diseases based on user input. Built using trained ML models with a user-friendly interface for early health risk assessment.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800',
-      tags: ['Machine Learning', 'Python', 'Healthcare', 'Prediction System'],
-      github:
-        'https://github.com/bhavani3420/Multiple-Disease-Prediction-Webapp.git',
+        'A real-time language exchange platform where users connect globally for chat and video calls. Implemented JWT authentication, friend requests, messaging, and Stream Video SDK for one-to-one communication.',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Stream SDK'],
+      github: 'https://github.com/bhavani3420/LinguaConnect',
       live: '#',
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'E-Commerce UI',
+      title: 'BeatFlow – Music Streaming Web App',
       description:
-        'A responsive e-commerce UI with modular components. Developed using HTML, CSS, and JavaScript with focus on user experience and modern design principles.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800',
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      github: 'https://github.com/bhavani3420/Ecommerce',
+        'A full-stack music streaming application allowing users to search and play songs using the YouTube API. Includes authentication, custom playlists, favorites management, and a responsive music player.',
+      image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800',
+      tags: ['Node.js', 'Express', 'MongoDB', 'YouTube API', 'ImageKit'],
+      github: 'https://github.com/bhavani3420/BeatFlow-Music-Streaming-App',
       live: '#',
       color: 'from-cyan-500 to-blue-500',
     },
     {
-      title: 'Expense Tracker',
+      title: 'AI Route Rationalization System (SIH)',
       description:
-        'A personal budgeting app with local storage integration. Enabled adding, editing, and deleting expenses with real-time updates and intuitive user interface.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Local Storage'],
-      github: 'https://github.com/bhavani3420/CodeAlpha_Expense_Tracker',
+        'An AI-driven transport optimization system developed for Smart India Hackathon to reduce bus delays and prevent bus bunching using CNN-LSTM traffic prediction and Ant Colony Optimization.',
+      image: 'https://images.unsplash.com/photo-1502920917128-1aa500764b7d?w=800',
+      tags: ['Python', 'PyTorch', 'CLSTM', 'ACO', 'Google Maps API'],
+      github: '#',
       live: '#',
       color: 'from-pink-500 to-purple-500',
     },
     {
-      title: 'Portfolio',
+      title: 'Musentia – Emotion Based Music Recommender',
       description:
-        'A modern React-based personal portfolio showcasing projects, skills, and certifications with smooth animations and responsive design.',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800',
-      tags: ['React', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://github.com/bhavani3420/bhavani-portfolio.git',
+        'An AI system that detects facial emotions using a CNN model and recommends music accordingly. Built with MediaPipe for real-time emotion detection and a Streamlit interface.',
+      image: 'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800',
+      tags: ['Python', 'CNN', 'MediaPipe', 'Streamlit', 'AI'],
+      github: '#',
       live: '#',
       color: 'from-yellow-500 to-orange-500',
+    },
+    {
+      title: 'Conversational Intelligence Analyzer',
+      description:
+        'An NLP-based analytics system that extracts behavioral insights from WhatsApp chat exports using topic modeling, sentiment analysis, and interaction pattern visualization.',
+      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800',
+      tags: ['Python', 'NLP', 'LDA', 'Pandas', 'Data Analysis'],
+      github: '#',
+      live: '#',
+      color: 'from-green-500 to-teal-500',
     },
   ];
 
@@ -121,6 +130,7 @@ const Projects = () => {
                       {project.title.charAt(0)}
                     </span>
                   </div>
+
                   <motion.div className="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
                     <motion.a
                       href={project.github}
@@ -130,6 +140,7 @@ const Projects = () => {
                     >
                       <FiGithub className="w-6 h-6 text-white" />
                     </motion.a>
+
                     <motion.a
                       href={project.live}
                       target="_blank"
@@ -145,9 +156,11 @@ const Projects = () => {
                   <h3 className="text-xl font-bold mb-2 text-white">
                     {project.title}
                   </h3>
+
                   <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                     {project.description}
                   </p>
+
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, i) => (
                       <span
